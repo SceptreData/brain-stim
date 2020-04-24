@@ -150,15 +150,65 @@ We've just told Netlify that we want to use its identity servers for our authent
 
 Enable the Git Gateway, and then you should see something like this:
 
-![](/media/screenshot_2020-04-24-identity-settings.png)
+![Git Gateway](/media/screenshot_2020-04-24-identity-settings.png "The Gateway to Git")
 
 From this prompt you can create new user Roles. We aren't going to be creating any right now, but it can come in handy. If it is empty, edit your settings and generate a new Github API Access token. 
 
+## Almost there
 
+Still with me? Good,  there isn't much left. Now that we've turned on our Netlify Identity and Git Gateway services, we need to make sure our project is properly set up.
 
-gatsby-config.js module.exports
+Lets go back to our **config.yml** file. Change the backend section to look like this:
 
-4. Set up config.yml This is our Advanced Custom Fields. It's also where we list the git repo.
-5. Git Gateway
+```yaml
+backend:
+  name: git-gateway
+  branch: master
+```
 
-NOTE: Make sure that your package.json and other config files point towards the correct repo and file structure.
+This lets netlifyCMS know that we are using their authentication provider. It also tells the CMS to commit changes straight to the master branch. We aren't messing around here, all of our commits go straight to production.
+
+Using Git, commit and push these changes. Now, when you navigate to YOUR_SITE_URL/admin/, you will be prompted to create an account and login. 
+
+![huzzah](/media/huzzah.gif "huzzah!")
+
+From the CMS, try to make a new blog post. Changes you make from the CMS backend will be commit to your github repo as new markdown files. Just like that we are creating dynamic content! You will notice in the markdown widget its possible to add and manipulate images, making this entire process very smooth.
+
+## But Wait - It still isn't working!
+
+I'm sure you've written half a dozen blog posts so far. But they aren't showing up on your website! This is because we haven't told Gatsby where to find our dynamic content. 
+
+Before installing any new packages, you might want to run **git pull**. We've been adding files to our repo through the CMS remember? 
+
+Now, from the command line, run the following command:
+
+```shell
+npm install gatsby-source-filesystem
+```
+
+and add the following to your gatsby-config.js
+
+```javascript
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {},
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/content/posts/blog`,
+      },
+    },
+    `gatsby-plugin-netlify-cms`,
+  ],
+// ... Site Metadata etc.
+```
+
+Notice how we've added the gatsby-source-filesystem plugin as the SECOND plugin in the array. You have to be careful here because the order of the plugins matters. What we've just done is we've told gatsby "Hey, we want you to look up files from the filesystem. Find them at the following path".
+
+Now save. Commit your changes.  Push your changes. Curse the git gods while all of this happens. But lo and behold, once your site rebuilds...your blog posts should start to work! 
+
+![](/media/thats-all.gif)
