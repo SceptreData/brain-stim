@@ -124,8 +124,41 @@ If you try to add a new blog post it will show up on your page! However, you wil
 
 Gatsby and Git go together like peanut butter and jelly. For the purposes of this tutorial I am going to assume you know how to move your project into a git repo. Once you have your project commit and pushed to git, head on over to [www.netlify.com](https://www.netlify.com) and create an account.
 
-4. gatsby-config.js module.exports
-5. Set up config.yml This is our Advanced Custom Fields. It's also where we list the git repo.
-6. Git Gateway
+Netlify is a fantastic hosting service that offers a lot of modern features. We're interested in its ability to watch our git repos. Whenever it sees a change in your git repo, it triggers your gatsby-sites build process. NetlifyCMS works by committing new files to your github repo. So, every time you save an entry on your CMS it will trigger a netlify build and deploy your updated site!
+
+![Woh](/media/woh.gif "Keanu says WOH")
+
+Once you are logged in to Netlify, you will be presented with your dashboard. Adding a site to Netlify from Github is easy! Just click the "New Site from Git" option.
+
+![Netlify Dashboard](/media/screenshot_2020-04-24-sites-david-bergeron-s-team.png "Netlify Dashboard")
+
+This will guide you through a series of prompts to add your website to Netlify. Once this has done, Netlify will clone your project and start building it for you. You will notice that Netlify probably gave it some sort of silly name like "molten-jaguar-124567".  No one one wants that! From the dashboard navigate to your new project. Click "Site Settings".
+
+You should see the following under "General": 
+
+![Change name](/media/screenshot_2020-04-24-general-settings.png "change site name")
+
+Click "Change Site Name" and then name it whatever you want. For example, if you named it "brain-stim", you can access your new app at https://brain-stim.netlify.app.
+
+\## Enable Authentication
+
+If all goes well, after a few minutes your blog will be live and hosted. But if you try to access the admin dashboard  (by adding /admin/ to the end of your base url), you'll still be using the test-repo backend. Not what we want! We want new changes to save to our git repo.\
+\
+To do this, we will be using Netlify's Identity and git-gateway features. You enable both of these features through your site settings settings on the netlify dashboard. From the settings page, navigate down to "Identity". **Enable it.**
+
+We've just told Netlify that we want to use its identity servers for our authentication, but now we have to get the OK from our github repo. Under the new found Identity settings, scroll down to **SERVICES**.
+
+Enable the Git Gateway, and then you should see something like this:
+
+![](/media/screenshot_2020-04-24-identity-settings.png)
+
+From this prompt you can create new user Roles. We aren't going to be creating any right now, but it can come in handy. If it is empty, edit your settings and generate a new Github API Access token. 
+
+
+
+gatsby-config.js module.exports
+
+4. Set up config.yml This is our Advanced Custom Fields. It's also where we list the git repo.
+5. Git Gateway
 
 NOTE: Make sure that your package.json and other config files point towards the correct repo and file structure.
