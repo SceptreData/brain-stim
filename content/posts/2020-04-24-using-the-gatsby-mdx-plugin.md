@@ -13,8 +13,6 @@ tags:
   - Web Development
   - Gatsby
 ---
-
-
 # What's MDX?
 
 MDX is markdown with super powers. It lets you write React's JSX inside your markdown documents. Why would you want this? It lets you do a lot less typing! You don't need to spec out a whole react component every time you need a new blog post, you just include the component in your markdown file.
@@ -75,6 +73,6 @@ Check out this cooooool Div.
 </TomatoBox>
 ```
 
-That's it. React components in your markdown.
+That's it.  Just like that, we have React components in our markdown.
 
 ![Asplode](/media/asplode.gif "Boom baby!")
