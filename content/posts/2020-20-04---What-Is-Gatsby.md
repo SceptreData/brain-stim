@@ -9,7 +9,7 @@ tags:
   - 'Design'
   - 'Static Site Generators'
   - 'Web Development'
-description: 'A brief description of what Gatsby is'
+description: "What the heck is this Gatsby we've been hearing so much about? Do I care? Should you? In this article we briefly go over some of the underlying concepts."
 socialImage: '/media/42-line-bible.jpg'
 ---
 
