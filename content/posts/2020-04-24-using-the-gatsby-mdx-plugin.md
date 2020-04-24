@@ -3,7 +3,7 @@ template: post
 title: Using the gatsby MDX plugin
 slug: gatsby-mdx
 draft: false
-date: 2020-04-24T21:24:06.086Z
+date: 2020-04-18T21:24:00.000Z
 description: >-
   In this very brief article we discuss using the MDX plugin, a tool which
   allows you to write react components in your markdown. Wow!
@@ -72,6 +72,7 @@ Check out this cooooool Div.
   I Love tomatoes!
 </TomatoBox>
 ```
+
 
 That's it.  Just like that, we have React components in our markdown.
 
