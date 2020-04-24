@@ -42,6 +42,10 @@ If you want to make sure everything runs properly, you can start your live serve
 gatsby develop
 ```
 
+You should see something like this:
+
+![gatsby blog](/media/screenshot_2020-04-24-home.png "gatsby blog")
+
 ## Download the Plugins
 
 Alright! look at all these cool files. At this point your folder structure should look like this:
