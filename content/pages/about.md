@@ -1,13 +1,19 @@
 ---
-title: "About me"
-template: "page"
-socialImage: "/media/image-2.jpg"
+template: page
+title: About me
+socialImage: /media/image-2.jpg
+slug: about-me
+draft: false
 ---
+Hi! I'm David. Let me tell you a bit about myself.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+![I am a studious man. With Studious plans.](/media/image-2.jpg)
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+ I like to think in terms of systems. This has given me a leg up as a
+ programmer and as a designer. I solve problems, and I try to solve
+them in a methodical way.
 
-*Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.*
-
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+These days I live in a world of Javascript. I started my programming
+adventure in C, modern javascript makes me feel like a wizard in
+comparison. These days you can usually find me building sites with the
+great [Gatsby.js](https://www.gatsbyjs.org).
