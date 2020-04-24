@@ -72,9 +72,6 @@ Check out this cooooool Div.
   I Love tomatoes!
 </TomatoBox>
 ```
-<div style={{background: 'tomato', color: 'white'}}>
-  I love tomatoes!
-</div>
 
 
 That's it.  Just like that, we have React components in our markdown.
