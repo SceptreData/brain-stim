@@ -48,7 +48,7 @@ gatsby-plugin for that! Working with Gatsby-plugins is a lot like working with l
 
 ## Working with Git
 
-That's all well and good, but What if I want to make changes to the site? Using some of the ultra-modern, and free ( and fast! ) solutions available like [Netlify](https://www.netlify.com/) or [Vercel (formerly Zeit.com)](https://vercel.com/), this could not be easier.\
+That's all well and good, but What if I want to make changes to the site? Using some of the ultra-modern free ( and fast! ) solutions available like [Netlify](https://www.netlify.com/) or [Vercel (formerly Zeit.com)](https://vercel.com/), this could not be easier.\
 Gatsby (and the rest of the world honestly) encourages you to use a git repo for your project. If you're hosting your site on Netlify, all you have to do is point it towards your git repo. Whenever you push changes to your repo it triggers a web hook, and
 Netlify rebuilds your project, just like that.
 
