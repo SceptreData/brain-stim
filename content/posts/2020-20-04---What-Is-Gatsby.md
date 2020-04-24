@@ -59,3 +59,7 @@ pages that are built as a result.
 How fast, you might ask? 
 
 ![Road Runner](/media/roadrunner.gif "Road Runner")
+
+
+
+Want to learn more? Check out my article on [setting up a blog with Gatsby and NetlifyCMS.](https://brain-stim.netlify.app/posts/set-up-gatsby-netlifycms)
