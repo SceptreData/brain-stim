@@ -14,6 +14,8 @@ tags:
 ---
 With Gatsby and NetlifyCMS its easy to get a fast SEO friendly blog thrown together. It's a great solution if you're building a website for someone less technical, they can manage the website through the CMS and never have to touch the scary Javascript lurking beneath.
 
+![](/media/letsgo.gif)
+
 ## Install Gatsby
 
 The first step of this project is to install the [Gatsby command line tool](https://www.gatsbyjs.org/docs/gatsby-cli/). Similar to create-react-app, the gatsby-cli tool lets you set up and work on new projects quickly. While it is not necessary, I reccomend installing the package globally. For the purposes of this demonstration I will be using NPM as the package manager, but in real life I use Yarn.
@@ -106,7 +108,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
 ```
 
-OK There's a lot going on here so lets break it down. The first section, **backend** tells netlifyCMS who our backend provider. At the moment we don't have one. Netlify is kind enough to provide a dummy backend called 'test-repo' while we're still testing the project.
+OK There's a lot going on here so lets break it down. The first section, **backend** tells netlifyCMS about our backend provider. At the moment we don't have one. Netlify is kind enough to provide a dummy backend called 'test-repo' while we're still testing the project.
 
 Below that we have some fields which identify important folders for our project. When we upload media through the CMS, it will be stored in the static/assets folder. When the site gets built and all of our media gets processed, the optimized files will live in public_folder.
 
@@ -144,10 +146,10 @@ You should see the following under "General":
 
 Click "Change Site Name" and then name it whatever you want. For example, if you named it "brain-stim", you can access your new app at https://brain-stim.netlify.app.
 
-\## Enable Authentication
+## Enable Authentication
 
-If all goes well, after a few minutes your blog will be live and hosted. But if you try to access the admin dashboard  (by adding /admin/ to the end of your base url), you'll still be using the test-repo backend. Not what we want! We want new changes to save to our git repo.\
-\
+If all goes well, after a few minutes your blog will be live and hosted. But if you try to access the admin dashboard  (by adding /admin/ to the end of your base url), you'll still be using the test-repo backend. Not what we want! We want new changes to save to our git repo.
+
 To do this, we will be using Netlify's Identity and git-gateway features. You enable both of these features through your site settings settings on the netlify dashboard. From the settings page, navigate down to "Identity". **Enable it.**
 
 We've just told Netlify that we want to use its identity servers for our authentication, but now we have to get the OK from our github repo. Under the new found Identity settings, scroll down to **SERVICES**.
