@@ -13,12 +13,19 @@ description: "What the heck is this Gatsby we've been hearing so much about? Do 
 socialImage: '/media/42-line-bible.jpg'
 ---
 
+- [The Features](#the-features)
+- [The Build Process](#the-build-process)
+- [Working With Git](#working-with-git)
+
 Gatsby is a free, open source static site generator. It works with React and
 does as much work as possible to make your static sites blazing fast.
 
 The nice thing about using Gatsby is that it fits into your existing react
-workflow. If you're already using React, Gatsby is a snap. All of your react code
-gets minified, and optimized to pure HTML/JS/CSS. If you're like me,
+workflow. If you're already using React, Gatsby is a snap.
+
+## The Features
+
+All of your react code gets minified, and optimized to pure HTML/JS/CSS. If you're like me,
 you're used to setting up a complicated gulp/grunt pipeline to properly handle your various
 optimizations. With Gatsby, you get a lot of this _for free_.
 No server code has to execute before your page is pushed down the wire which means
@@ -32,12 +39,16 @@ the most appropriate image format. In effect this means that you will
 server ultra-light .webp images to users who can see them, and optimized
 .jpg's and .png's where appropriate.
 
+## The Build Process
+
 Gatsby does all this optimization during its build process. What sets
 Gatsby apart is that you have a lot of control over this process.
 It's here where you outline the rules that connect your application together.
 Additionally, there is a diverse set of open-source plugins for you to make use of.
 lets say you wanted to build blog post pages out of markdown files. There's a
 gatsby-plugin for that!
+
+## Working with Git
 
 That's all well and good, but What if I want to make changes to the site?
 Using some of the ultra-modern, and free ( and fast! ) solutions available like
