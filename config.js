@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://brain-stim.netlify.app/',
   pathPrefix: '/',
-  title: 'Blog by David Bergeron',
+  title: 'BrainStim - A Blog by David Bergeron',
   subtitle: 'Developer, designer, all around great guy',
   copyright: '© All rights reserved.',
   disqusShortname: '',
