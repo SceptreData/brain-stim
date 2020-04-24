@@ -211,4 +211,4 @@ Notice how we've added the gatsby-source-filesystem plugin as the SECOND plugin 
 
 Now save. Commit your changes.  Push your changes. Curse the git gods while all of this happens. But lo and behold, once your site rebuilds...your blog posts should start to work! 
 
-![](/media/thats-all.gif)
+![That's all](/media/thats-all.gif "That's all folks!")
